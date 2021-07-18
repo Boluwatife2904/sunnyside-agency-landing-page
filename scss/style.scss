@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@300;400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -16,4 +16,218 @@ body {
 
 .fraunces-font {
   font-family: "Fraunces", sans-serif;
+}
+
+.testimonial {
+  text-align: center;
+  padding: 10px;
+  max-width: 330px;
+  margin: 0 auto 50px;
+
+  .testimonial-image {
+    margin-bottom: 25px;
+
+    img {
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+    }
+  }
+
+  .testimonial-text {
+    margin-bottom: 60px;
+
+    p {
+      line-height: 25px;
+      font-weight: 600;
+      color: hsl(232, 10%, 55%);
+    }
+  }
+
+  .testimonial-author {
+    h6 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    span {
+      color: hsl(210, 4%, 67%);
+      font-weight: 600;
+    }
+  }
+}
+
+// TESTIMONIALS
+.testimonials {
+  background: hsl(26, 100%, 99%);
+  padding: 120px 10px;
+
+  @media screen and (max-width: 576px) {
+    padding: 40px 10px;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    .header {
+      text-align: center;
+      margin-bottom: 50px;
+      text-transform: uppercase;
+      color: hsl(210, 4%, 67%);
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .testimonials-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+
+      .wrapper {
+        flex: 0 0 33.3333333%;
+        max-width: 33.3333333%;
+
+        @media screen and (max-width: 992px) {
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+
+        @media screen and (max-width: 670px) {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// IMAGE GALLERY
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+
+  div {
+    flex: 0 0 25%;
+    max-width: 25%;
+    height: 400px;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: 992px) {
+      flex: 0 0 50%;
+      max-width: 50%;
+      height: 300px;
+    }
+
+    @media screen and (max-width: 414px) {
+      height: 200px;
+    }
+  }
+
+  .image-one {
+    background-image: url("../images/desktop/image-gallery-milkbottles.jpg");
+
+    @media screen and (max-width: 414px) {
+      background-image: url("../images/mobile/image-gallery-milkbottles.jpg");
+    }
+  }
+
+  .image-two {
+    background-image: url("../images/desktop/image-gallery-orange.jpg");
+
+    @media screen and (max-width: 414px) {
+      background-image: url("../images/mobile/image-gallery-orange.jpg");
+    }
+  }
+
+  .image-three {
+    background-image: url("../images/desktop/image-gallery-cone.jpg");
+
+    @media screen and (max-width: 414px) {
+      background-image: url("../images/mobile/image-gallery-cone.jpg");
+    }
+  }
+
+  .image-four {
+    background-image: url("../images/desktop/image-gallery-sugarcubes.jpg");
+
+    @media screen and (max-width: 414px) {
+      background-image: url("../images/mobile/image-gallery-sugar-cubes.jpg");
+    }
+  }
+}
+
+// FOOTER
+footer {
+  background-color: hsl(167, 44%, 70%);
+  color: hsl(168, 34%, 41%);
+  padding: 50px 20px;
+
+  .content {
+    text-align: center;
+
+    .logo {
+      font-size: 40px;
+      font-weight: 700;
+      color: hsl(167, 40%, 24%);
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+
+      li {
+        a {
+          text-decoration: none;
+          font: inherit;
+          font-weight: 600;
+          color: inherit;
+          transition: all 0.3s linear;
+
+          &:hover {
+            color: hsl(0, 0%, 100%);
+          }
+        }
+      }
+    }
+
+    .logo {
+      margin-bottom: 30px;
+    }
+
+    .navigation-links {
+      margin-bottom: 70px;
+
+      li {
+        margin-right: 50px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        a {
+          font-size: 17px;
+        }
+      }
+    }
+
+    .social-media {
+      margin-bottom: 10px;
+
+      li {
+        margin-right: 30px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        a {
+          font-size: 24px;
+        }
+      }
+    }
+  }
 }
