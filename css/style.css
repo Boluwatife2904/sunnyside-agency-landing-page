@@ -19,6 +19,96 @@ body {
   font-family: "Fraunces", sans-serif;
 }
 
+.graphic-photography {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.graphic-photography .graphic-design,
+.graphic-photography .photography {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  max-width: 50%;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.graphic-photography .graphic-design .text,
+.graphic-photography .photography .text {
+  max-width: 350px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.graphic-photography .graphic-design .text h3,
+.graphic-photography .photography .text h3 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.graphic-photography .graphic-design .text p,
+.graphic-photography .photography .text p {
+  line-height: 28px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 700px) {
+  .graphic-photography .graphic-design,
+  .graphic-photography .photography {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.graphic-photography .graphic-design {
+  background-image: url("../images/desktop/image-graphic-design.jpg");
+}
+
+@media screen and (max-width: 414px) {
+  .graphic-photography .graphic-design {
+    background-image: url("../images/mobile/image-graphic-design.jpg");
+  }
+}
+
+.graphic-photography .graphic-design .text p,
+.graphic-photography .graphic-design .text h3 {
+  color: #25564b;
+}
+
+.graphic-photography .photography {
+  background-image: url("../images/desktop/image-photography.jpg");
+}
+
+@media screen and (max-width: 414px) {
+  .graphic-photography .photography {
+    background-image: url("../images/desktop/image-photography.jpg");
+  }
+}
+
+.graphic-photography .photography .text p,
+.graphic-photography .photography .text h3 {
+  color: #19536b;
+}
+
 .testimonial {
   text-align: center;
   padding: 10px;
@@ -204,8 +294,8 @@ footer .content {
 footer .content .logo img {
   -webkit-filter: invert(1);
           filter: invert(1);
-  opacity: 0.7;
-  height: 40px;
+  opacity: 0.5;
+  height: 35px;
 }
 
 footer .content ul {
