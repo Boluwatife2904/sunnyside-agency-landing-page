@@ -19,7 +19,7 @@ body {
   font-family: "Fraunces", sans-serif;
 }
 
-.stand-out {
+.image-text-grid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27,40 +27,58 @@ body {
       flex-wrap: wrap;
 }
 
-.stand-out:first-child {
+.image-text-grid:first-child {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
 
-.stand-out:first-child .left-wrapper {
+.image-text-grid:first-child .left-wrapper {
   background-image: url("../images/desktop/image-transform.jpg");
 }
 
-.stand-out:first-child .right-wrapper .content h3 {
+@media screen and (max-width: 414px) {
+  .image-text-grid:first-child .left-wrapper {
+    background-image: url("../images/mobile/image-transform.jpg");
+  }
+}
+
+.image-text-grid:first-child .right-wrapper .content h3 {
   max-width: 80%;
 }
 
-.stand-out:first-child .right-wrapper .content p {
+@media screen and (max-width: 800px) {
+  .image-text-grid:first-child .right-wrapper .content h3 {
+    max-width: 100%;
+  }
+}
+
+.image-text-grid:first-child .right-wrapper .content p {
   max-width: 86%;
 }
 
-.stand-out:first-child .right-wrapper .content a::after {
+@media screen and (max-width: 800px) {
+  .image-text-grid:first-child .right-wrapper .content p {
+    max-width: 100%;
+  }
+}
+
+.image-text-grid:first-child .right-wrapper .content a::after {
   background-color: rgba(250, 212, 0, 0.25);
 }
 
-.stand-out .left-wrapper,
-.stand-out .right-wrapper {
+.image-text-grid .left-wrapper,
+.image-text-grid .right-wrapper {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
   max-width: 50%;
 }
 
-@media screen and (max-width: 375px) {
-  .stand-out .left-wrapper,
-  .stand-out .right-wrapper {
+@media screen and (max-width: 800px) {
+  .image-text-grid .left-wrapper,
+  .image-text-grid .right-wrapper {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
@@ -69,7 +87,7 @@ body {
   }
 }
 
-.stand-out .left-wrapper {
+.image-text-grid .left-wrapper {
   background-image: url("../images/desktop/image-stand-out.jpg");
   height: 500px;
   background-position: center;
@@ -80,7 +98,14 @@ body {
      object-fit: cover;
 }
 
-.stand-out .right-wrapper {
+@media screen and (max-width: 414px) {
+  .image-text-grid .left-wrapper {
+    height: 350px;
+    background-image: url("../images/mobile/image-stand-out.jpg");
+  }
+}
+
+.image-text-grid .right-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -93,18 +118,31 @@ body {
   background-color: #fffbf8;
 }
 
-.stand-out .right-wrapper .content {
+.image-text-grid .right-wrapper .content {
   padding: 20px;
   max-width: 540px;
 }
 
-.stand-out .right-wrapper .content h3 {
+@media screen and (max-width: 800px) {
+  .image-text-grid .right-wrapper .content {
+    text-align: center;
+    padding: 80px 30px;
+  }
+}
+
+.image-text-grid .right-wrapper .content h3 {
   font-size: 40px;
   margin-bottom: 30px;
   font-weight: 900;
 }
 
-.stand-out .right-wrapper .content p {
+@media screen and (max-width: 414px) {
+  .image-text-grid .right-wrapper .content h3 {
+    font-size: 30px;
+  }
+}
+
+.image-text-grid .right-wrapper .content p {
   line-height: 30px;
   margin-bottom: 30px;
   color: #818498;
@@ -113,7 +151,13 @@ body {
   max-width: 80%;
 }
 
-.stand-out .right-wrapper .content a {
+@media screen and (max-width: 800px) {
+  .image-text-grid .right-wrapper .content p {
+    max-width: 100%;
+  }
+}
+
+.image-text-grid .right-wrapper .content a {
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 900;
@@ -123,7 +167,7 @@ body {
   z-index: 1;
 }
 
-.stand-out .right-wrapper .content a::after {
+.image-text-grid .right-wrapper .content a::after {
   width: 150px;
   height: 12px;
   background-color: rgba(254, 120, 103, 0.25);
@@ -184,7 +228,7 @@ body {
   font-weight: 600;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   .graphic-photography .graphic-design,
   .graphic-photography .photography {
     -webkit-box-flex: 0;
