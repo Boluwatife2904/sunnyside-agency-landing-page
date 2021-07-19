@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@300;400;500;600;700;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +17,122 @@ body {
 
 .fraunces-font {
   font-family: "Fraunces", sans-serif;
+}
+
+.stand-out {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.stand-out:first-child {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.stand-out:first-child .left-wrapper {
+  background-image: url("../images/desktop/image-transform.jpg");
+}
+
+.stand-out:first-child .right-wrapper .content h3 {
+  max-width: 80%;
+}
+
+.stand-out:first-child .right-wrapper .content p {
+  max-width: 86%;
+}
+
+.stand-out:first-child .right-wrapper .content a::after {
+  background-color: rgba(250, 212, 0, 0.25);
+}
+
+.stand-out .left-wrapper,
+.stand-out .right-wrapper {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  max-width: 50%;
+}
+
+@media screen and (max-width: 375px) {
+  .stand-out .left-wrapper,
+  .stand-out .right-wrapper {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.stand-out .left-wrapper {
+  background-image: url("../images/desktop/image-stand-out.jpg");
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.stand-out .right-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fffbf8;
+}
+
+.stand-out .right-wrapper .content {
+  padding: 20px;
+  max-width: 540px;
+}
+
+.stand-out .right-wrapper .content h3 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  font-weight: 900;
+}
+
+.stand-out .right-wrapper .content p {
+  line-height: 30px;
+  margin-bottom: 30px;
+  color: #818498;
+  font-weight: 600;
+  font-size: 17px;
+  max-width: 80%;
+}
+
+.stand-out .right-wrapper .content a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 18px;
+  color: #222;
+  position: relative;
+  z-index: 1;
+}
+
+.stand-out .right-wrapper .content a::after {
+  width: 150px;
+  height: 12px;
+  background-color: rgba(254, 120, 103, 0.25);
+  position: absolute;
+  content: "";
+  bottom: -2px;
+  left: -8px;
+  border-radius: 30px;
+  z-index: -1;
 }
 
 .graphic-photography {
