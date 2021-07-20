@@ -27,6 +27,13 @@ body {
   min-height: 800px;
 }
 
+@media screen and (max-width: 576px) {
+  .hero-section {
+    background-image: url("../images/mobile/image-header.jpg");
+    min-height: 600px;
+  }
+}
+
 .hero-section .navbar {
   margin-bottom: 85px;
   padding: 30px 40px;
@@ -41,8 +48,26 @@ body {
           align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+  .hero-section .navbar {
+    padding: 40px 25px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero-section .navbar {
+    margin-bottom: 10px;
+  }
+}
+
 .hero-section .navbar .logo img {
   height: 35px;
+}
+
+@media screen and (max-width: 750px) {
+  .hero-section .navbar .logo img {
+    height: 25px;
+  }
 }
 
 .hero-section .navbar ul {
@@ -72,13 +97,74 @@ body {
   text-transform: uppercase;
   color: #212121;
   font-weight: 700;
-  -webkit-transition: all .3s linear;
-  transition: all .3s linear;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .hero-section .navbar ul li:last-child a:hover {
   background: #6ccdfe;
   color: white;
+}
+
+@media screen and (max-width: 750px) {
+  .hero-section .navbar ul {
+    position: fixed;
+    background-color: #fffcfa;
+    padding: 40px 10px;
+    top: 135px;
+    left: 7%;
+    width: 320px;
+    width: 86%;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+    -webkit-transform: translateX(120%);
+            transform: translateX(120%);
+  }
+  .hero-section .navbar ul li {
+    display: block;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-right: 0;
+  }
+  .hero-section .navbar ul li a {
+    display: inline-block;
+    color: #a7abae;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .hero-section .navbar ul li:last-child {
+    margin-bottom: 10px;
+  }
+  .hero-section .navbar ul li:last-child a {
+    background-color: #fad400;
+    font-size: 16px;
+  }
+  .hero-section .navbar ul::after {
+    position: absolute;
+    content: "";
+    border: 30px solid transparent;
+    border-right: 30px solid #fffcfa;
+    top: -30px;
+    right: 0;
+  }
+  .hero-section .navbar ul.show {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.hero-section .navbar button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  display: block;
+}
+
+@media screen and (min-width: 750px) {
+  .hero-section .navbar button {
+    display: none;
+  }
 }
 
 .hero-section .container {
@@ -93,6 +179,12 @@ body {
   font-weight: 900;
   color: white;
   margin-bottom: 90px;
+}
+
+@media screen and (max-width: 576px) {
+  .hero-section .container h1 {
+    font-size: 40px;
+  }
 }
 
 .image-text-grid {

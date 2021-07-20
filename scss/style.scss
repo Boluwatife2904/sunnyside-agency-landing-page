@@ -26,6 +26,11 @@ body {
   background-size: cover;
   min-height: 800px;
 
+  @media screen and (max-width: 576px) {
+    background-image: url("../images/mobile/image-header.jpg");
+    min-height: 600px;
+  }
+
   .navbar {
     margin-bottom: 85px;
     padding: 30px 40px;
@@ -33,9 +38,21 @@ body {
     justify-content: space-between;
     align-items: center;
 
+    @media screen and (max-width: 768px) {
+      padding: 40px 25px;
+    }
+
+    @media screen and (max-width: 576px) {
+      margin-bottom: 10px;
+    }
+
     .logo {
       img {
         height: 35px;
+
+        @media screen and (max-width: 750px) {
+          height: 25px;
+        }
       }
     }
 
@@ -63,7 +80,7 @@ body {
             text-transform: uppercase;
             color: hsl(0, 0%, 13%);
             font-weight: 700;
-            transition: all .3s linear;
+            transition: all 0.3s linear;
 
             &:hover {
               background: hsl(200, 99%, 71%);
@@ -71,6 +88,66 @@ body {
             }
           }
         }
+      }
+
+      @media screen and (max-width: 750px) {
+        position: fixed;
+        background-color: hsl(26, 100%, 99%);
+        padding: 40px 10px;
+        top: 135px;
+        left: 7%;
+        width: 320px;
+        width: 86%;
+        transition: all .3s linear;
+        transform: translateX(120%);
+
+        li {
+          display: block;
+          text-align: center;
+          margin-bottom: 40px;
+          margin-right: 0;
+
+          a {
+            display: inline-block;
+            color: hsl(210, 4%, 67%);
+            font-size: 18px;
+            font-weight: 600;
+          }
+
+          &:last-child {
+            margin-bottom: 10px;
+
+            a {
+              background-color: hsl(51, 100%, 49%);
+              font-size: 16px;
+            }
+          }
+        }
+
+        &::after {
+          position: absolute;
+          content: "";
+          border: 30px solid transparent;
+          border-right: 30px solid hsl(26, 100%, 99%);
+          top: -30px;
+          right: 0;
+        }
+
+        &.show {
+          transform: translateX(0);
+        }
+      }
+    }
+
+    button {
+      border: none;
+      outline: none;
+      background: none;
+      cursor: pointer;
+      display: block;
+
+      @media screen and (min-width: 750px) {
+        display: none;
       }
     }
   }
@@ -86,6 +163,10 @@ body {
       font-weight: 900;
       color: hsl(0, 0%, 100%);
       margin-bottom: 90px;
+
+      @media screen and (max-width: 576px) {
+        font-size: 40px;
+      }
     }
   }
 }
