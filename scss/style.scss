@@ -18,6 +18,78 @@ body {
   font-family: "Fraunces", sans-serif;
 }
 
+// HEADER
+.hero-section {
+  background-image: url("../images/desktop/image-header.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 800px;
+
+  .navbar {
+    margin-bottom: 85px;
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      img {
+        height: 35px;
+      }
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        display: inline-block;
+        margin-right: 50px;
+
+        a {
+          text-decoration: none;
+          font-size: 17px;
+          font-weight: 500;
+          color: hsl(0, 0%, 100%);
+        }
+
+        &:last-child {
+          margin-right: 0;
+
+          a {
+            background: hsl(0, 0%, 100%);
+            border-radius: 30px;
+            padding: 14px 30px;
+            text-transform: uppercase;
+            color: hsl(0, 0%, 13%);
+            font-weight: 700;
+            transition: all .3s linear;
+
+            &:hover {
+              background: hsl(200, 99%, 71%);
+              color: hsl(0, 0%, 100%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .container {
+    text-align: center;
+    padding: 20px;
+
+    h1 {
+      text-transform: uppercase;
+      font-size: 50px;
+      letter-spacing: 6px;
+      font-weight: 900;
+      color: hsl(0, 0%, 100%);
+      margin-bottom: 90px;
+    }
+  }
+}
+
 // TRANDSFORM YOUR BRAND AND STAND OUT TO THE RIGHT AUDIENCE SECTION
 .image-text-grid {
   display: flex;

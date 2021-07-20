@@ -19,6 +19,82 @@ body {
   font-family: "Fraunces", sans-serif;
 }
 
+.hero-section {
+  background-image: url("../images/desktop/image-header.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 800px;
+}
+
+.hero-section .navbar {
+  margin-bottom: 85px;
+  padding: 30px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero-section .navbar .logo img {
+  height: 35px;
+}
+
+.hero-section .navbar ul {
+  list-style: none;
+}
+
+.hero-section .navbar ul li {
+  display: inline-block;
+  margin-right: 50px;
+}
+
+.hero-section .navbar ul li a {
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
+}
+
+.hero-section .navbar ul li:last-child {
+  margin-right: 0;
+}
+
+.hero-section .navbar ul li:last-child a {
+  background: white;
+  border-radius: 30px;
+  padding: 14px 30px;
+  text-transform: uppercase;
+  color: #212121;
+  font-weight: 700;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+.hero-section .navbar ul li:last-child a:hover {
+  background: #6ccdfe;
+  color: white;
+}
+
+.hero-section .container {
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-section .container h1 {
+  text-transform: uppercase;
+  font-size: 50px;
+  letter-spacing: 6px;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 90px;
+}
+
 .image-text-grid {
   display: -webkit-box;
   display: -ms-flexbox;
